@@ -65,6 +65,22 @@ function addGame() {
         headers: {
             "Content-Type": "application/json"
         },
+
+<script>
+function playGame(game) {
+    let frame = document.getElementById("gameFrame");
+
+    if(game === "snake") {
+        frame.src = "https://playsnake.org/";
+    }
+    if(game === "tetris") {
+        frame.src = "https://tetris.com/play-tetris";
+    }
+    if(game === "pong") {
+        frame.src = "https://ponggame.org/";
+    }
+}
+</script>
         body: JSON.stringify({ name, url, category })
     })
     .then(res => res.text())
@@ -134,3 +150,19 @@ function addGame() {
 }
 
 fetch("https://site-kurucusu.onrender.com")
+
+.game-card {
+    position: relative;
+    width: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.game-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+

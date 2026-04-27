@@ -132,3 +132,5 @@ function addGame() {
     .then(res => res.json())
     .then(data => alert(data.message));
 }
+
+fetch("https://site-kurucusu.onrender.com")

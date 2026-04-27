@@ -114,3 +114,23 @@ button {
     cursor:pointer;
     border-radius:8px;
 }
+
+.categories {
+    text-align:center;
+    margin:20px;
+}
+
+.categories button {
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#334155;
+    color:white;
+    transition:0.3s;
+}
+
+.categories button:hover {
+    background:#22c55e;
+}
